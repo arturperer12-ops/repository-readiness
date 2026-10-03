@@ -1,0 +1,19 @@
+name: Repository Readiness Check
+description: Report repository files and practices that help contributors get started.
+author: Repository Readiness contributors
+branding:
+  icon: check-circle
+  color: blue
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: "3.11"
+    - name: Check repository readiness
+      shell: bash
+      run: python "${{ github.action_path }}/action.py"
+      env:
+        GITHUB_WORKSPACE: ${{ github.workspace }}
