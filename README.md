@@ -31,7 +31,7 @@ jobs:
       - uses: arturperer12-ops/repository-readiness@v1
 ```
 
-Replace `arturperer12-ops` with the account or organization that publishes this action. The `v1` reference should be a maintained major-version tag in the action's repository. The action needs only the checked-out workspace and GitHub's built-in step-summary path; it does not need a personal access token or network access.
+The example uses this repository's published action. If you fork or republish it, replace the owner portion of the `uses` value with your account or organization. The `v1` reference should be a maintained major-version tag in the action's repository. The action needs only the checked-out workspace and GitHub's built-in step-summary path; it does not need a personal access token or network access.
 
 ## What it checks
 
